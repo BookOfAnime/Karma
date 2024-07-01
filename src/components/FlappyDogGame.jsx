@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import './FlappyDogGame.css';
 
 const FlappyDogGame = () => {
   const canvasRef = useRef(null);
@@ -22,23 +23,25 @@ const FlappyDogGame = () => {
     const gameLoop = () => {
       if (!gameState.isPlaying) return;
 
+      // Clear canvas
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw dog
       dog.velocity += gravity;
       dog.y += dog.velocity;
-      ctx.fillStyle = '#FFD700';
+      ctx.fillStyle = 'yellow';
       ctx.beginPath();
       ctx.arc(50, dog.y, 20, 0, Math.PI * 2);
       ctx.fill();
 
       // Update and draw pipes
-      ctx.fillStyle = '#4CAF50';
+      ctx.fillStyle = 'green';
       pipes.forEach((pipe, index) => {
         pipe.x -= 2;
         ctx.fillRect(pipe.x, 0, pipeWidth, pipe.top);
         ctx.fillRect(pipe.x, pipe.top + pipeGap, pipeWidth, canvas.height - pipe.top - pipeGap);
 
+        // Check collision
         if (
           50 > pipe.x && 50 < pipe.x + pipeWidth &&
           (dog.y < pipe.top || dog.y > pipe.top + pipeGap)
@@ -46,15 +49,18 @@ const FlappyDogGame = () => {
           endGame();
         }
 
+        // Increase score
         if (pipe.x === 48) {
           setGameState(prev => ({ ...prev, score: prev.score + 1 }));
         }
 
+        // Remove off-screen pipes
         if (pipe.x < -pipeWidth) {
           pipes.splice(index, 1);
         }
       });
 
+      // Add new pipes
       if (pipes.length === 0 || pipes[pipes.length - 1].x < canvas.width - 200) {
         pipes.push({
           x: canvas.width,
@@ -62,6 +68,7 @@ const FlappyDogGame = () => {
         });
       }
 
+      // Check boundaries
       if (dog.y > canvas.height || dog.y < 0) {
         endGame();
       }

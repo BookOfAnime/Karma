@@ -1,3 +1,12 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+}
+
 /* Tokenomics Section Styles */
 #tokenomics {
     padding: 100px 20px;
@@ -38,6 +47,8 @@
     flex: 1;
     transition: height 0.5s, background 0.5s;
     border-radius: 5px;
+    background: linear-gradient(180deg, #00C9FF 0%, #92FE9D 100%);
+    animation: grow-bar 1s ease-out;
 }
 
 .bar:hover {
@@ -81,6 +92,7 @@
     font-weight: bold;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
     .chart {
         height: 150px;

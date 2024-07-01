@@ -1,12 +1,12 @@
-import React from 'react';
-import Header from './components/Header';
-import Navbar from './components/Navbar';
-import About from './components/About';
-import Features from './components/Features';
-import Tokenomics from './components/Tokenomics';
-import FlappyDogGame from './components/FlappyDogGame';
-import Footer from './components/Footer';
-import './App.css';
+import React from "react";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import About from "./components/About";
+import Features from "./components/Features";
+import Tokenomics from "./components/Tokenomics";
+import FlappyDogGame from "./components/FlappyDogGame";
+import Footer from "./components/Footer";
+import "./App.css";
 
 function App() {
   return (

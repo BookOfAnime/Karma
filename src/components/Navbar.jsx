@@ -31,7 +31,7 @@ const Navbar = () => {
         <div></div>
       </div>
       <ul className={isMenuOpen ? 'open' : ''}>
-        {['about', 'features', 'tokenomics', 'game'].map((section) => (
+        {['about', 'features', 'tokenomics'].map((section) => (
           <li key={section}>
             <a 
               href={`#${section}`} 

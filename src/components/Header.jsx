@@ -13,11 +13,11 @@ const Header = () => {
 
   return (
     <header>
+      <div className="overlay"></div>
       <h1 className="glitch" data-text="Karma Coin">Karma Coin</h1>
-      <p>Where Good Dogs Earn Great Rewards</p>
+      <p>Where Good Deeds Earn Great Rewards</p>
       <div className="coin" style={{ transform: `rotateY(${coinRotation}deg)` }}>
-        <img className='karmaDog' src="./karma.jpeg"></img>
-    
+        <img className='karmaDog' src="./karma.jpeg" alt="Karma Dog" />
       </div>
       <a href="#about" className="cta-button">Learn More</a>
     </header>
