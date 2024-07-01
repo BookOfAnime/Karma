@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Tokenomics.css'
+import './Tokenomics.css';
 
 const Tokenomics = () => {
   const [chartData, setChartData] = useState([]);

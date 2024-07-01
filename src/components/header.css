@@ -91,4 +91,7 @@ header {
       font-size: 3rem;
     }
   }
-  
+
+  .karmaDog {
+    border-radius: 10px;
+  }

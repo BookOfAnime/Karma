@@ -16,8 +16,8 @@ const Header = () => {
       <h1 className="glitch" data-text="Karma Coin">Karma Coin</h1>
       <p>Where Good Dogs Earn Great Rewards</p>
       <div className="coin" style={{ transform: `rotateY(${coinRotation}deg)` }}>
-        <div className="coin-face front">🐕</div>
-        <div className="coin-face back">🪙</div>
+        <img className='karmaDog' src="./karma.jpeg"></img>
+    
       </div>
       <a href="#about" className="cta-button">Learn More</a>
     </header>
