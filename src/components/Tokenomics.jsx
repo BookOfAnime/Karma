@@ -35,12 +35,12 @@ const Tokenomics = () => {
         </div>
       </div>
       <p>Our unique token distribution ensures a fair and sustainable ecosystem:</p>
-      <ul className="token-distribution">
+      {/* <ul className="token-distribution">
         <li><span className="percentage">40%</span> Community Rewards</li>
         <li><span className="percentage">30%</span> Liquidity Pool</li>
         <li><span className="percentage">20%</span> Development</li>
         <li><span className="percentage">10%</span> Marketing</li>
-      </ul>
+      </ul> */}
     </section>
   );
 };

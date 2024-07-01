@@ -21,8 +21,8 @@ const About = () => {
         </div>
         <div className="stat">
           <div className="stat-icon">🔄</div>
-          <h3>10k+</h3>
-          <p>Transactions/Day</p>
+          <h3>Virtual Chat</h3>
+          <p>Great community and livestream</p>
         </div>
       </div>
     </section>
