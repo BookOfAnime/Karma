@@ -2,84 +2,96 @@
 #tokenomics {
     padding: 100px 20px;
     text-align: center;
-    background-color: #f5f5f5;
-  }
-  
-  #tokenomics h2 {
+    background: linear-gradient(135deg, #f5f5f5 25%, #fff);
+}
+
+#tokenomics h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
-  }
-  
-  .chart-container {
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.chart-container {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
-  }
-  
-  .chart {
+    transition: transform 0.3s ease;
+}
+
+.chart-container:hover {
+    transform: scale(1.05);
+}
+
+.chart {
     display: flex;
     align-items: flex-end;
     height: 200px;
-    gap: 2px;
+    gap: 5px;
     overflow-x: auto;
-  }
-  
-  .bar {
+    padding: 10px 0;
+}
+
+.bar {
     flex: 1;
-    background-color: #4CAF50;
-    transition: height 0.5s;
-  }
-  
-  @keyframes grow-bar {
+    transition: height 0.5s, background 0.5s;
+    border-radius: 5px;
+}
+
+.bar:hover {
+    background: linear-gradient(180deg, #92FE9D 0%, #00C9FF 100%);
+    cursor: pointer;
+}
+
+@keyframes grow-bar {
     from { height: 0; }
     to { height: 100%; }
-  }
-  
-  .chart-labels {
+}
+
+.chart-labels {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
     color: #666;
-  }
-  
-  .token-distribution {
+}
+
+.token-distribution {
     list-style: none;
     padding: 0;
     margin-top: 20px;
     text-align: left;
     display: inline-block;
-  }
-  
-  .token-distribution li {
-    margin-bottom: 10px;
+}
+
+.token-distribution li {
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
-  }
-  
-  .percentage {
-    background-color: #4CAF50;
+    font-size: 1.1rem;
+}
+
+.percentage {
+    background: linear-gradient(135deg, #00C9FF, #92FE9D);
     color: white;
-    padding: 5px 10px;
+    padding: 5px 15px;
     border-radius: 20px;
-    margin-right: 10px;
+    margin-right: 15px;
     font-weight: bold;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .chart {
-      height: 150px;
+        height: 150px;
     }
-  
+
     .chart-labels {
-      flex-direction: column;
-      align-items: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
     }
-  
+
     .token-distribution {
-      width: 100%;
+        width: 100%;
     }
-  }
-  
+}

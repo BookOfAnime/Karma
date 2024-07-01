@@ -11,13 +11,13 @@ const About = () => {
       <div className="stats">
         <div className="stat">
           <div className="stat-icon">👥</div>
-          <h3>1M+</h3>
-          <p>Holders</p>
+          <h3>Fair Pump Launch</h3>
+          <p>Equality for all de dawgs</p>
         </div>
         <div className="stat">
           <div className="stat-icon">💰</div>
-          <h3>$100M</h3>
-          <p>Market Cap</p>
+          <h3>$1Billion</h3>
+          <p>Supply </p>
         </div>
         <div className="stat">
           <div className="stat-icon">🔄</div>

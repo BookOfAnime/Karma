@@ -22,6 +22,7 @@ const Tokenomics = () => {
               className="bar" 
               style={{ 
                 height: `${data.value}px`,
+                background: `linear-gradient(180deg, #00C9FF 0%, #92FE9D 100%)`,
                 animation: `grow-bar 1s ease-out ${index * 0.1}s`
               }}
               title={`${data.date}: ${data.value.toFixed(2)}`}
